@@ -23,14 +23,14 @@ RSpec.describe User, type: :model do
     let!(:user) { create(:user) }
     context "with a valid password" do
         it "should return true" do 
-            puts user.username
+            user.username
             expect(user.is_password?('onering')).to be true
         end
     end
 
     context "with an invalid password" do 
         it "should return false" do 
-            puts user.username
+            user.username
             expect(user.is_password?('tworings?')).to be false
           end
       end
